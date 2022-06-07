@@ -5,33 +5,35 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+    userprofile: async (parent,{city,drink,smoke,level}) => {
+      return Userprofile.find({
+        where: {
+            city: city,
+            drink: drink,
+            smoke: smoke,
+            level: level
+          }
+      });
+    };
+   
+    }
    
   
 
 
    
     }
-  },
+  
   Mutation: {
    
-    }, 
-    // login: async (parent, { email, password }) => {
-    //   const user = await User.findOne({ email });
+     
+    addUserlogin async (parent{username,email,password}) => {
+      const user = await Userlogin.create({username,email,password});
+      const token = signToken(user);
+      return {token,user};
 
-    //   if (!user) {
-    //     throw new AuthenticationError('Incorrect credentials');
-    //   }
-
-    //   const correctPw = await user.isCorrectPassword(password);
-
-    //   if (!correctPw) {
-    //     throw new AuthenticationError('Incorrect credentials');
-    //   }
-
-    //   const token = signToken(user);
-
-    //   return { token, user };
-    
+    }
+  }
   
 
 
