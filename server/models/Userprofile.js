@@ -10,7 +10,7 @@ const userProfileSchema = new Schema({
   },
   age: {
     required: true,
-    type: Int,
+    type: Number,
     trim: true,
   },
   city: {
