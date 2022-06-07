@@ -14,27 +14,27 @@ const resolvers = {
             level: level
           }
       });
-    };
+    },
    
-    }
+    },
    
   
 
 
    
-    }
+    
   
   Mutation: {
    
      
-    addUserlogin async (parent{username,email,password}) => {
+    addUserlogin: async (parent,{username,email,password}) => {
       const user = await Userlogin.create({username,email,password});
       const token = signToken(user);
       return {token,user};
 
     }
   }
-  
+}
 
 
 module.exports = resolvers;

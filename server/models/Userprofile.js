@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+
+// const mongoose = require("mongoose");
 const { Schema, model } = require("mongoose");
 
 const userProfileSchema = new Schema({
@@ -10,12 +11,12 @@ const userProfileSchema = new Schema({
   },
   age: {
     required: true,
-    type: Number,
+    type: String,
     trim: true,
   },
   city: {
+    required: true,
     type: String,
-    require: true,
     trim: true,
   },
   level: {
@@ -35,6 +36,6 @@ const userProfileSchema = new Schema({
 // set up pre-save middleware to create password
 
 
-const Userprofile = mongoose.model("Userprofile", userProfileSchema);
+// const Userprofile = mongoose.model("Userprofile", userProfileSchema);
 
-module.exports = Userprofile;
+module.exports = userProfileSchema;
