@@ -7,12 +7,11 @@ const Example = (props) => {
     <div>
       <Card>
         <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Test Card</CardTitle>
-          <CardSubtitle>Here is some example text for the subtitle</CardSubtitle>
-          <CardText>We will have the user information here, including city and our other questions when a user </CardText>
-          <Button>Like Button</Button>
-          <Button>Dislike Button</Button>
+        <CardBody style = {{backgroundcolor: '#f3ece4'}}>
+          <CardTitle style = {{color: '#1C3D12'}}>Test Card</CardTitle>
+          <CardSubtitle style = {{color: '#1C3D12'}}>Here is some example text for the subtitle</CardSubtitle>
+          <CardText style = {{color: '#1C3D12'}}>We will have the user information here, including city and our other questions when a user </CardText>
+          <Button style = {{backgroundcolor: '515b5f', color: '#ffcf4'}}>Favorite</Button>
         </CardBody>
       </Card>
     </div>
