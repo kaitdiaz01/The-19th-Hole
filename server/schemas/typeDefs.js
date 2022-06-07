@@ -4,7 +4,7 @@ const typeDefs = gql`
   type Userprofile {
     _id: ID
     name: String
-    age:Int
+    age:Number
     city:String
     level: String
     drink: Boolean
@@ -33,7 +33,7 @@ const typeDefs = gql`
 
   type Mutation {
     addUserlogin(username: String!, email: String!, password: String!): Auth
-    updateUser(firstName: String, age: Int,
+    updateUser(firstName: String, age: Number,
        city: String, level: String,drink:Boolean,smoke:Boolean): Userlogin
     login(email: String!, password: String!): Auth
   }
