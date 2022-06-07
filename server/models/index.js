@@ -1,4 +1,3 @@
-const User = require('./User');
+const Userprofile = require('./Userprofile');
 
-
-module.exports = { User };
+module.exports = { Userprofile };
