@@ -44,7 +44,7 @@ const resolvers = {
     login: async(parent,{email,password})=>{
       const userlogin= await userlogin.findOne({ email,password });
 
-      if (!userlogin) {
+      if (!user) {
         throw new AuthenticationError('No!userlogin with this email found!');
       }
 
@@ -54,8 +54,8 @@ const resolvers = {
         throw new AuthenticationError('Incorrect password!');
       }
 
-      const token = signToken(userlogin);
-      return { token, userlogin };
+      const token = signToken(user);
+      return { token, user };
     }, 
     }
   }
