@@ -13,6 +13,7 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
+import UserCards from './components/UserCards';
 
 
 
@@ -45,6 +46,9 @@ function App() {
                 path="/" 
                 element={<Home />} 
               /> */}
+          <div>
+            <UserCards />
+          </div>
     
         </div>
       </Router>
