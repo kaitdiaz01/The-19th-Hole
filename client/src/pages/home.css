@@ -1,7 +1,5 @@
-import Home 
 
 
-#Home {
-    background-image: '/Users/kaitlyndiaz/Documents/UCF/The-19th-Hole/client/public/images/golfcourse.jpeg';
-    background-color: aqua;
+body {
+    background-image: url(../../src/assets/golf-background.webp)
 }

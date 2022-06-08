@@ -1,5 +1,6 @@
 import React from "react";
-// import Signup from "../components/Signup";
+import './home.css';
+import Welcome from '../components/Welcome ';
 import Login from "../components/Login";
 
 
@@ -7,8 +8,7 @@ import Login from "../components/Login";
 const Home = () => {
   return (
     <div className="container" id="Home" >
-     {/* <Signup/> */}
-     {/* <Login/>  */}
+     <Welcome />
     </div>
   );
 };

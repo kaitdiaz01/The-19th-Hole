@@ -34,7 +34,7 @@ function NavBar() {
         <div>
         <Navbar bg="dark" variant="dark">
           <Container>
-            <Navbar.Brand href="#home">The-19th-Hole</Navbar.Brand>
+            <Navbar.Brand><Link to="/">The-19th-Hole </Link></Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link><Link to="/signup"> Signup </Link></Nav.Link>
               <Nav.Link>
