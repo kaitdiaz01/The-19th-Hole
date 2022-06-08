@@ -8,12 +8,11 @@ const toggle = () => setIsOpen(!isOpen);
   return (
 <Card style={{ width: '18rem' }}>
   <Card.Body style={{ backgroundColor: '#f3ece4' }}>
-    <Card.Title style={{ color: '#515b5f' }}>Card Title</Card.Title>
+    <Card.Title style={{ color: '#515b5f' }}>User's Name</Card.Title>
     <Card.Text style={{ color: '#1C3D12' }}>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      Here will be the information about the player that you choose
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Button style={{backgroundColor: '#515b5f'}}>Button to favorite this player</Button>
   </Card.Body>
 </Card>  );
 };
