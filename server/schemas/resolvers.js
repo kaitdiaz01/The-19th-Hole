@@ -20,36 +20,48 @@ const resolvers = {
     },
    
     },
-  },
 
-//   Mutation: {
-//       addUser: async (parent,{username,email,password,name,age,city,level,drink,smoke}) => {
-//       const user = await Userlogin.create({username,email,password,name,age,city,level,drink,smoke});
-//       const token = signToken(user);
-//       return { token, user };
-//     },
-//     updateUser: async (parent, { age, level, drink, smoke }) => {
-//       const user = await userlogin.put({ age, level, drink, smoke });
-//       const token = signToken(user);
-//       return { token, user };
-//     },
-//     login: async (parent, { email, password }) => {
-//       const userlogin = await userlogin.findOne({ email, password });
 
-//       if (!userlogin) {
-//         throw new AuthenticationError("No!userlogin with this email found!");
-//       }
 
-//       const correctPw = await userlogin.isCorrectPassword(password);
+   
+  
 
-//       if (!correctPw) {
-//         throw new AuthenticationError("Incorrect password!");
-//       }
 
-//       const token = signToken(userlogin);
-//       return { token, userlogin };
-//     },
-//   },
-// };
+   
+    
+  
+  Mutation: {
+      addUser: async (parent,{username,email,password,name,age,city,level,drink,smoke}) => {
+      const user = await Userlogin.create({username,email,password,name,age,city,level,drink,smoke});
+      const token = signToken(user);
+      return {token,user};
+    },
+    updateUser: async (parent,{age,level,drink,smoke}) =>{
+      const user = await userlogin.put({age,level,drink,smoke});
+      const token = signToken(user);
+      return {token,user};
+    },
+    login: async(parent,{email,password})=>{
+      const userlogin= await userlogin.findOne({ email,password });
 
-// module.exports = resolvers;
+      if (!user) {
+        throw new AuthenticationError('No!userlogin with this email found!');
+      }
+
+      const correctPw = await userlogin.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect password!');
+      }
+
+      const token = signToken(user);
+      return { token, user };
+    }, 
+    }
+  }
+  
+
+
+
+module.exports = resolvers;
+
