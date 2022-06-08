@@ -1,10 +1,11 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button'
+import './welcome.css';
 
 function Welcome() {
   return (
-    <div>
+    <div class='card-holder' >
       <Card>
         <Card.Body>
           <Card.Title>Ready to meet some people!</Card.Title>

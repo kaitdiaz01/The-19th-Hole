@@ -1,11 +1,10 @@
 import React from "react";
 import Auth from "../../utils/auth";
-
-// import React, {useState} from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
+import logo from '../../assets/golflogo.png'
 
 
 function NavBar() {
@@ -17,7 +16,9 @@ function NavBar() {
         <div>
         <Navbar bg="dark" variant="dark">
           <Container>
-            <Navbar.Brand href="#home">The-19th-Hole</Navbar.Brand>
+            <Navbar.Brand> 
+              <img src={logo} className="App-logo" alt="logo"/> 
+              </Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link><Link to="/Favorites">
                 Favorites </Link></Nav.Link>
@@ -34,7 +35,7 @@ function NavBar() {
         <div>
         <Navbar bg="dark" variant="dark">
           <Container>
-            <Navbar.Brand><Link to="/">The-19th-Hole </Link></Navbar.Brand>
+            <Navbar.Brand><Link to="/"></Link></Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link><Link to="/signup"> Signup </Link></Nav.Link>
               <Nav.Link>
