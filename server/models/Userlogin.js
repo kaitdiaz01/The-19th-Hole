@@ -27,7 +27,7 @@ const userloginSchema = new Schema({
   },
   age: {
     required: true,
-    type: Number,
+    type: String,
     trim: true,
   },
   city: {
