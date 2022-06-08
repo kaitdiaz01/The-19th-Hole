@@ -7,10 +7,9 @@ const UserCards = (props) => {
 const toggle = () => setIsOpen(!isOpen);
   return (
 <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
+  <Card.Body style={{ backgroundColor: '#f3ece4' }}>
+    <Card.Title style={{ color: '#515b5f' }}>Card Title</Card.Title>
+    <Card.Text style={{ color: '#1C3D12' }}>
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </Card.Text>
