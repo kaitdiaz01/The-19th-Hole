@@ -19,6 +19,34 @@ const userloginSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  name: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true,
+  },
+  age: {
+    required: true,
+    type: Number,
+    trim: true,
+  },
+  city: {
+    type: String,
+    require: true,
+    trim: true,
+  },
+  level: {
+    type: String,
+    require: true,
+  },
+  drink: {
+    type: Boolean,
+    require: true,
+  },
+  smoke: {
+    type: Boolean,
+    require: true,
+  },
   
 });
 
