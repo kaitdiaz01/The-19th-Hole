@@ -20,7 +20,7 @@ const resolvers = {
             password: password
           }
       });
-    };
+    },
    
     },
    
