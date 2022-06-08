@@ -7,8 +7,8 @@ const typeDefs = gql`
     email: String
     password: String
     name: String
-    age:Number
-    city:String
+    age: String
+    city: String
     level: String
     drink: Boolean
     smoke: Boolean
@@ -34,6 +34,7 @@ const typeDefs = gql`
     updateUser(firstName: String!, age: Number!,
        city: String!, level: String!,drink:Boolean!,smoke:Boolean!): Userlogin
     login(email: String!, password: String!):Auth
+
 
   }
 `;

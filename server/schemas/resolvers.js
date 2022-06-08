@@ -1,13 +1,15 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { Userlogin, Userprofile } = require('../models');
 const { signToken } = require('../utils/auth');
 
 
 const resolvers = {
   Query: {
-    userprofile: async (parent,{city,drink,smoke,level}) => {
+
+    userprofile: async (parent, { city, drink, smoke, level }) => {
       return Userprofile.find({
         where: {
+
             city: city,
             drink: drink,
             smoke: smoke,
@@ -58,6 +60,7 @@ const resolvers = {
     }
   }
   
+
 
 
 module.exports = resolvers;
