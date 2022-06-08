@@ -1,3 +1,4 @@
+
 const { AuthenticationError } = require('apollo-server-express');
 const { User} = require('../models');
 const { signToken } = require('../utils/auth');
@@ -8,21 +9,24 @@ const resolvers = {
 
     User: async (parent, { city, drink, smoke, level }) => {
       return User.find({
-        where: {
 
-            city: city,
-            drink: drink,
-            smoke: smoke,
-            level: level
-          },
-          exclude: {
-            email: email,
-            password: password
-          }
+        where: {
+          city: city,
+          drink: drink,
+          smoke: smoke,
+          level: level,
+        },
+        exclude: {
+          email: email,
+          password: password,
+        },
       });
-    };
+    },
    
     },
+
+
+
    
   
 
@@ -64,3 +68,4 @@ const resolvers = {
 
 
 module.exports = resolvers;
+
