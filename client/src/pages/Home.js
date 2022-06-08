@@ -6,9 +6,9 @@ import Login from "../components/Login";
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="container" id="Home" >
      {/* <Signup/> */}
-     <Login/> 
+     {/* <Login/>  */}
     </div>
   );
 };

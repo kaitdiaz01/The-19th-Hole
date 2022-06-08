@@ -28,7 +28,7 @@ const userSchema = new Schema({
   },
   age: {
     required: true,
-    type: Number,
+    type: String,
     trim: true,
   },
   city: {
