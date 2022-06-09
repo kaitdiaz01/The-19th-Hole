@@ -40,7 +40,7 @@ const FindPlayers = () => {
                                 <div className="flex-row">
                                     {user.map(({ _id, firstName, lastName, city, level, drink, smoke }, index) => (
                                         <div>
-                                            <UserCard firstName = {user.firstName} lastName = {user.lastName} city = {user.city} level = {user.level} drink ={user.drink} smoke = {user.smoke} /> 
+                                            <UserCards firstName = {user.firstName} lastName = {user.lastName} city = {user.city} level = {user.level} drink ={user.drink} smoke = {user.smoke} /> 
 
                                         </div>
                                     ))}

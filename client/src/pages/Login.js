@@ -37,10 +37,10 @@ function Login(props) {
     <div className="container login-card">
       <Link to="/signup">← Go to Signup</Link>
       <h2>Login</h2>
-      <Form onSubmit={handleFormSubmit}>
+      {/* <Form onSubmit={handleFormSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control
+          <input
             type="email"
             placeholder="Enter email"
             id="email"
@@ -53,7 +53,7 @@ function Login(props) {
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control
+          <input
             type="password"
             placeholder="Password"
             id="pwd"
@@ -68,7 +68,37 @@ function Login(props) {
         <Button variant="primary" type="submit">
           Submit
         </Button>
-      </Form>
+      </Form> */}
+          <form onSubmit={handleFormSubmit}>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="email">Email address:</label>
+          <input
+            placeholder="youremail@test.com"
+            name="email"
+            type="email"
+            id="email"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">Password:</label>
+          <input
+            placeholder="******"
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+        </div>
+        {error ? (
+          <div>
+            <p className="error-text">The provided credentials are incorrect</p>
+          </div>
+        ) : null}
+        <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
   );
 }

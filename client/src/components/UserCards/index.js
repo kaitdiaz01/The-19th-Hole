@@ -15,7 +15,6 @@ const toggle = () => setIsOpen(!isOpen);
       <div>{level}</div>
       <div>{drink}</div>
       <div>{smoke}</div>
-      <div>{gamble}</div>
     </Card.Text>
 
     <Button style={{backgroundColor: '#515b5f'}}>Button to favorite this player</Button>

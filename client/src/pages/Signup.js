@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import './signup.css';
+import "./signup.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
@@ -39,11 +39,11 @@ function Signup(props) {
     <div className="container signup-card">
       <Link to="/login">← Go to Login</Link>
 
-      <h2>Signup</h2>
+      {/* <h2>Signup</h2>
       <Form onSubmit={handleFormSubmit}>
         <Form.Group className="mb-3" controlId="formBasicFirstName">
           <Form.Label>First Name</Form.Label>
-          <Form.Control
+          <input
             type="firstname"
             placeholder="Enter first name"
             id="firstName"
@@ -53,7 +53,7 @@ function Signup(props) {
 
         <Form.Group className="mb-3" controlId="formBasicLastName">
           <Form.Label>Last Name</Form.Label>
-          <Form.Control
+          <input
             type="lastname"
             placeholder="Enter last name"
             id="lastName"
@@ -63,7 +63,12 @@ function Signup(props) {
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" id="email" onChange={handleChange}/>
+          <input
+            type="email"
+            placeholder="Enter email"
+            id="email"
+            onChange={handleChange}
+          />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
@@ -71,12 +76,75 @@ function Signup(props) {
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" id="pwd" onChange={handleChange}/>
+          <input
+            type="password"
+            placeholder="Password"
+            id="pwd"
+            onChange={handleChange}
+          />
         </Form.Group>
 
-        <Button variant="primary" type="submit">←<Link to="/findplayers">Submit</Link>
+        <Button variant="primary" type="submit">
+          ←<Link to="/findplayers">Submit</Link>
         </Button>
-      </Form>
+      </Form> */}
+
+<h2>Signup</h2>
+      <form onSubmit={handleFormSubmit}>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="firstName">First Name:</label>
+          <input
+            placeholder="First"
+            name="firstName"
+            type="firstName"
+            id="firstName"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="lastName">Last Name:</label>
+          <input
+            placeholder="Last"
+            name="lastName"
+            type="lastName"
+            id="lastName"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="email">Email:</label>
+          <input
+            placeholder="youremail@test.com"
+            name="email"
+            type="email"
+            id="email"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">Password:</label>
+          <input
+            placeholder="******"
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="age">Age:</label>
+          <input
+            placeholder="type in age"
+            name="age"
+            type="age"
+            id="age"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
   );
 }
