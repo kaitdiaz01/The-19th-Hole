@@ -2,9 +2,9 @@ import { gql } from '@apollo/client';
 
 
 
-export const QUERY_USER = gql`
-  {
-    user {
+export const QUERY_USERS = gql`
+  query findAllUsers{
+    User {
       firstName
       lastName
       email

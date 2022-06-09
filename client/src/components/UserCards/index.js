@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+
 const UserCards = ({firstName, lastName, city, level, drink, smoke}) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState();
 
 const toggle = () => setIsOpen(!isOpen);
   return (

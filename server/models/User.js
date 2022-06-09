@@ -25,7 +25,7 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-    age: {
+  age: {
     required: true,
     type: String,
     trim: true,
