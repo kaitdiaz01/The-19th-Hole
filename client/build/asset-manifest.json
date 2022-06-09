@@ -12,14 +12,13 @@
     "static/css/2.0a9ec390.chunk.css.map": "/static/css/2.0a9ec390.chunk.css.map",
     "static/css/main.e7ef55af.chunk.css.map": "/static/css/main.e7ef55af.chunk.css.map",
     "static/js/2.429d7b41.chunk.js.LICENSE.txt": "/static/js/2.429d7b41.chunk.js.LICENSE.txt",
+
     "static/media/home.css": "/static/media/golf-background.4c84e9f0.webp",
     "static/media/golflogo.b4ed4905.png": "/static/media/golflogo.b4ed4905.png"
   },
   "entrypoints": [
     "static/js/runtime-main.94fbf65d.js",
     "static/css/2.0a9ec390.chunk.css",
-    "static/js/2.429d7b41.chunk.js",
-    "static/css/main.e7ef55af.chunk.css",
-    "static/js/main.cec3cd7a.chunk.js"
-  ]
-}
+    "static/js/2.2c4d7b28.chunk.js",
+    "static/css/main.ec6ff2b3.chunk.css",
+    "static/js/main.0f613b17.chunk.js"
