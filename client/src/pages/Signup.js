@@ -74,8 +74,7 @@ function Signup(props) {
           <Form.Control type="password" placeholder="Password" id="pwd" onChange={handleChange}/>
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Submit
+        <Button variant="primary" type="submit">←<Link to="/findplayers">Submit</Link>
         </Button>
       </Form>
     </div>

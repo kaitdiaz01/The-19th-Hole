@@ -14,6 +14,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
 import UserCards from "./components/UserCards";
+import FindPlayers from "./pages/FindPlayers";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -44,6 +45,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/signup" element={<FindPlayers />} />
           </Routes>
           {/* <div>
             <UserCards />

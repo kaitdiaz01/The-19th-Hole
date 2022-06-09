@@ -36,7 +36,7 @@ const typeDefs = gql`
 			level: String!
 			drink: Boolean!
 			smoke: Boolean!
-		): Userlogin
+		): User
 		login(email: String!, password: String!): Auth
 	}
 `;
