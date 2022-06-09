@@ -1,9 +1,41 @@
-.signup-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    padding: 20px;
-    margin-top: 150px;
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Dosis:wght@200;500;600&display=swap");
 
+.signup-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+
+        background-color: white;
+        border-radius: 60px;
+        font-family: 'Comfortaa', cursive;
+        width: 50% !important;
+    }
+
+h2 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 27pt !important;
+    letter-spacing: 1pt !important;
+    padding-top: 5pt;
+}
+
+.login-link{
+    padding-top: 15pt;
+    letter-spacing: .25pt ;
+}
+
+.sign-form {
+    width: 63%;
+    padding-bottom: 15pt;
+}
+
+.first-name,
+.last-name,
+.email,
+.password {
+    font-size: 13pt !important;
+}
+
+.disclaimer {
+    font-size: 9pt !important;
 }

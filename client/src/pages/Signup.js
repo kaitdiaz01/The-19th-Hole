@@ -37,11 +37,10 @@ function Signup(props) {
 
   return (
     <div className="container signup-card">
-      <Link to="/login">← Go to Login</Link>
-
-      {/* <h2>Signup</h2>
-      <Form onSubmit={handleFormSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicFirstName">
+      <Link className="login-link" to="/login">← Go to Login</Link>
+      <h2>Signup</h2>
+      <Form className="sign-form" onSubmit={handleFormSubmit}>
+        <Form.Group className="mb-3 first-name" id="formBasicFirstName">
           <Form.Label>First Name</Form.Label>
           <input
             type="firstname"
@@ -51,7 +50,7 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicLastName">
+        <Form.Group className="mb-3 last-name" id="formBasicLastName">
           <Form.Label>Last Name</Form.Label>
           <input
             type="lastname"
@@ -61,20 +60,15 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3 email" id="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <input
-            type="email"
-            placeholder="Enter email"
-            id="email"
-            onChange={handleChange}
-          />
-          <Form.Text className="text-muted">
+          <Form.Control type="email" placeholder="Enter email" id="email" onChange={handleChange}/>
+          <Form.Text className="text-muted disclaimer">
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className="mb-3 password" id="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <input
             type="password"
@@ -87,7 +81,7 @@ function Signup(props) {
         <Button variant="primary" type="submit">
           ←<Link to="/findplayers">Submit</Link>
         </Button>
-      </Form> */}
+      </Form> */
 
 <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>

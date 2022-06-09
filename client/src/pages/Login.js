@@ -34,11 +34,11 @@ function Login(props) {
   };
 
   return (
-    <div className="container login-card">
-      <Link to="/signup">← Go to Signup</Link>
+    <div className="container login-card shadow p-3 mb-5">
+      <Link className= "signup-link" to="/signup">← Go to Signup</Link>
       <h2>Login</h2>
-      {/* <Form onSubmit={handleFormSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form className="log-form" onSubmit={handleFormSubmit}>
+        <Form.Group className="mb-3 email" id="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <input
             type="email"
@@ -46,12 +46,12 @@ function Login(props) {
             id="email"
             onChange={handleChange}
           />
-          <Form.Text className="text-muted">
+          <Form.Text className="text-muted disclaimer">
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className="mb-3 password" id="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <input
             type="password"
@@ -68,8 +68,11 @@ function Login(props) {
         <Button variant="primary" type="submit">
           Submit
         </Button>
-      </Form> */}
-          <form onSubmit={handleFormSubmit}>
+      </Form>
+      </div>
+  );
+}
+        /*  <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
           <label htmlFor="email">Email address:</label>
           <input
@@ -101,6 +104,6 @@ function Login(props) {
       </form>
     </div>
   );
-}
+}*/
 
 export default Login;
