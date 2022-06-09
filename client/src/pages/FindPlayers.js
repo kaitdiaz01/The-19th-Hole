@@ -33,23 +33,15 @@ const FindPlayers = () => {
                 {user ? (
                     <>
                         <h2>
-                            Order History for {user.firstName} {user.lastName}
+                            List of Users {user.firstName} {user.lastName}
                         </h2>
-                        {user.orders.map((order) => (
-                            <div key={order._id} className="my-2">
-                                <h3>
-                                    {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
-                                </h3>
+                        {user.map((user) => (
+                            <div key={user._id} className="my-2">
                                 <div className="flex-row">
-                                    {order.products.map(({ _id, image, name, price }, index) => (
-                                        <div key={index} className="card px-1 py-1">
-                                            <Link to={`/products/${_id}`}>
-                                                <img alt={name} src={`/images/${image}`} />
-                                                <p>{name}</p>
-                                            </Link>
-                                            <div>
-                                                <span>${price}</span>
-                                            </div>
+                                    {user.map(({ _id, firstName, lastName, city, level, drink, smoke }, index) => (
+                                        <div>
+                                            <UserCard firstName = {user.firstName} lastName = {user.lastName} city = {user.city} level = {user.level} drink ={user.drink} smoke = {user.smoke} /> 
+
                                         </div>
                                     ))}
                                 </div>
