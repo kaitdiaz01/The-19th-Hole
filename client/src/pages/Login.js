@@ -40,7 +40,7 @@ function Login(props) {
       <Form className="log-form" onSubmit={handleFormSubmit}>
         <Form.Group className="mb-3 email" id="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <input
+          <Form.Control
             type="email"
             placeholder="Enter email"
             id="email"
@@ -53,7 +53,7 @@ function Login(props) {
 
         <Form.Group className="mb-3 password" id="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <input
+          <Form.Control
             type="password"
             placeholder="Password"
             id="pwd"
@@ -72,38 +72,5 @@ function Login(props) {
       </div>
   );
 }
-        /*  <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
-          </div>
-        ) : null}
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-    </div>
-  );
-}*/
 
 export default Login;

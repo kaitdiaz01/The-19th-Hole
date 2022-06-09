@@ -36,13 +36,13 @@ function Signup(props) {
   };
 
   return (
-    <div className="container signup-card">
+    <div className="container signup-card shadow p-3 mb-5">
       <Link className="login-link" to="/login">← Go to Login</Link>
       <h2>Signup</h2>
       <Form className="sign-form" onSubmit={handleFormSubmit}>
         <Form.Group className="mb-3 first-name" id="formBasicFirstName">
           <Form.Label>First Name</Form.Label>
-          <input
+          <Form.Control
             type="firstname"
             placeholder="Enter first name"
             id="firstName"
@@ -52,7 +52,7 @@ function Signup(props) {
 
         <Form.Group className="mb-3 last-name" id="formBasicLastName">
           <Form.Label>Last Name</Form.Label>
-          <input
+          <Form.Control
             type="lastname"
             placeholder="Enter last name"
             id="lastName"
@@ -70,7 +70,7 @@ function Signup(props) {
 
         <Form.Group className="mb-3 password" id="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <input
+          <Form.Control
             type="password"
             placeholder="Password"
             id="pwd"
@@ -79,11 +79,11 @@ function Signup(props) {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          ←<Link to="/findplayers">Submit</Link>
+          ← Submit<Link to="/findplayers"></Link>
         </Button>
-      </Form> */
+      </Form> 
 
-<h2>Signup</h2>
+{/* <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
           <label htmlFor="firstName">First Name:</label>
@@ -138,7 +138,7 @@ function Signup(props) {
         <div className="flex-row flex-end">
           <button type="submit">Submit</button>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 }
