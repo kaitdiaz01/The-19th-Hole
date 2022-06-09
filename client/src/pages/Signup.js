@@ -42,7 +42,7 @@ function Signup(props) {
   };
 
   return (
-    <div className="container signup-card">
+ <div className="container signup-card">
       <Link to="/login">← Go to Login</Link>
 
       <h2>Signup</h2>

@@ -1,10 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Dosis:wght@200;500;600&display=swap");
 
 .login-card {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: white;
-        padding: 20px;
         margin-top: 200px;
 
+        background-color: white;
+        border-radius: 80px;
+        font-family: 'Comfortaa', cursive;
+        width: 50% !important;
     }
+
+h2 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 27pt !important;
+    letter-spacing: 1pt !important;
+    padding-top: 5pt;
+}
+
+.signup-link{
+    padding-top: 15pt;
+    letter-spacing: .25pt ;
+}
+
+.log-form {
+    width: 54%;
+    padding-bottom: 15pt;
+}
+
+.email,
+.password {
+    font-size: 13pt !important;
+}
+
+.disclaimer {
+    font-size: 9pt !important;
+}
