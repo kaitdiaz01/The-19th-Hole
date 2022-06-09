@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
+import { FormControl } from "react-bootstrap";
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -17,10 +18,15 @@ function Signup(props) {
     event.preventDefault();
     const mutationResponse = await addUser({
       variables: {
-        email: formState.email,
-        password: formState.password,
         firstName: formState.firstName,
         lastName: formState.lastName,
+        email: formState.email,
+        password: formState.password,
+        age: formState.age,
+        city: formState.city,
+        level: formState.level,
+        drink: formState.drink,
+        smoke: formState.smoke,
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -36,13 +42,14 @@ function Signup(props) {
   };
 
   return (
-    <div className="container signup-card shadow p-3 mb-5">
-      <Link className="login-link" to="/login">← Go to Login</Link>
+ <div className="container signup-card">
+      <Link to="/login">← Go to Login</Link>
+
       <h2>Signup</h2>
-      <Form className="sign-form" onSubmit={handleFormSubmit}>
-        <Form.Group className="mb-3 first-name" id="formBasicFirstName">
+      <Form onSubmit={handleFormSubmit}>
+        <Form.Group className="mb-3">
           <Form.Label>First Name</Form.Label>
-          <Form.Control
+          <FormControl
             type="firstname"
             placeholder="Enter first name"
             id="firstName"
@@ -50,9 +57,9 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3 last-name" id="formBasicLastName">
+        <Form.Group className="mb-3">
           <Form.Label>Last Name</Form.Label>
-          <Form.Control
+          <FormControl
             type="lastname"
             placeholder="Enter last name"
             id="lastName"
@@ -60,17 +67,22 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3 email" id="formBasicEmail">
+        <Form.Group className="mb-3">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" id="email" onChange={handleChange}/>
-          <Form.Text className="text-muted disclaimer">
+          <FormControl
+            type="email"
+            placeholder="Enter email"
+            id="email"
+            onChange={handleChange}
+          />
+          <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3 password" id="formBasicPassword">
+        <Form.Group className="mb-3">
           <Form.Label>Password</Form.Label>
-          <Form.Control
+          <FormControl
             type="password"
             placeholder="Password"
             id="pwd"
@@ -78,12 +90,62 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          ← Submit<Link to="/findplayers"></Link>
-        </Button>
-      </Form> 
+        <Form.Group className="mb-3">
+          <Form.Label>How old are you?</Form.Label>
+          <FormControl
+            type="age"
+            placeholder="age"
+            id="age"
+            onChange={handleChange}
+          />
+        </Form.Group>
 
-{/* <h2>Signup</h2>
+        <Form.Group className="mb-3">
+          <Form.Label>What city do you live in?</Form.Label>
+          <FormControl
+            type="city"
+            placeholder="city"
+            id="city"
+            onChange={handleChange}
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label>What is your level of expertise?</Form.Label>
+          <FormControl
+            type="level"
+            placeholder="level"
+            id="level"
+            onChange={handleChange}
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label>Do you drink?</Form.Label>
+          <FormControl
+            type="drink"
+            placeholder="drink"
+            id="drink"
+            onChange={handleChange}
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label>Do you smoke?</Form.Label>
+          <FormControl
+            type="smoke"
+            placeholder="smoke"
+            id="smoke"
+            onChange={handleChange}
+          />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+          ←<Link to="/findplayers">Submit</Link>
+        </Button>
+      </Form>
+
+      {/* <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
           <label htmlFor="firstName">First Name:</label>
