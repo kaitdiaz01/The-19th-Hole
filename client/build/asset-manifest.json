@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.3393870e.chunk.css",
-    "main.js": "/static/js/main.00b0f923.chunk.js",
-    "main.js.map": "/static/js/main.00b0f923.chunk.js.map",
+    "main.css": "/static/css/main.e7ef55af.chunk.css",
+    "main.js": "/static/js/main.be266aed.chunk.js",
+    "main.js.map": "/static/js/main.be266aed.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94fbf65d.js",
     "runtime-main.js.map": "/static/js/runtime-main.94fbf65d.js.map",
     "static/css/2.0a9ec390.chunk.css": "/static/css/2.0a9ec390.chunk.css",
-    "static/js/2.b992675f.chunk.js": "/static/js/2.b992675f.chunk.js",
-    "static/js/2.b992675f.chunk.js.map": "/static/js/2.b992675f.chunk.js.map",
+    "static/js/2.72f21e7d.chunk.js": "/static/js/2.72f21e7d.chunk.js",
+    "static/js/2.72f21e7d.chunk.js.map": "/static/js/2.72f21e7d.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.0a9ec390.chunk.css.map": "/static/css/2.0a9ec390.chunk.css.map",
-    "static/css/main.3393870e.chunk.css.map": "/static/css/main.3393870e.chunk.css.map",
-    "static/js/2.b992675f.chunk.js.LICENSE.txt": "/static/js/2.b992675f.chunk.js.LICENSE.txt",
-    "static/media/golfcourse.44aa132f.jpeg": "/static/media/golfcourse.44aa132f.jpeg"
+    "static/css/main.e7ef55af.chunk.css.map": "/static/css/main.e7ef55af.chunk.css.map",
+    "static/js/2.72f21e7d.chunk.js.LICENSE.txt": "/static/js/2.72f21e7d.chunk.js.LICENSE.txt",
+    "static/media/home.css": "/static/media/golf-background.4c84e9f0.webp",
+    "static/media/golflogo.b4ed4905.png": "/static/media/golflogo.b4ed4905.png"
   },
   "entrypoints": [
     "static/js/runtime-main.94fbf65d.js",
     "static/css/2.0a9ec390.chunk.css",
-    "static/js/2.b992675f.chunk.js",
-    "static/css/main.3393870e.chunk.css",
-    "static/js/main.00b0f923.chunk.js"
+    "static/js/2.72f21e7d.chunk.js",
+    "static/css/main.e7ef55af.chunk.css",
+    "static/js/main.be266aed.chunk.js"
   ]
 }
