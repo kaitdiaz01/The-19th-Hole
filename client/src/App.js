@@ -12,8 +12,7 @@ import Home from "./pages/Home";
 import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Nav from "./components/Nav";
-import UserCards from "./components/UserCards";
+import Nav from "./components/Nav"
 import FindPlayers from "./pages/FindPlayers";
 
 const httpLink = createHttpLink({
@@ -47,9 +46,6 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/signup" element={<FindPlayers />} />
           </Routes>
-          {/* <div>
-            <UserCards />
-          </div> */}
         </div>
       </Router>
     </ApolloProvider>

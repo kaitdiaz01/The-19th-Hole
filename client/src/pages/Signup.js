@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
+import { FormControl } from "react-bootstrap";
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -17,10 +18,15 @@ function Signup(props) {
     event.preventDefault();
     const mutationResponse = await addUser({
       variables: {
-        email: formState.email,
-        password: formState.password,
         firstName: formState.firstName,
         lastName: formState.lastName,
+        email: formState.email,
+        password: formState.password,
+        age: formState.age,
+        city: formState.city,
+        level: formState.level,
+        drink: formState.drink,
+        smoke: formState.smoke,
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -39,11 +45,11 @@ function Signup(props) {
     <div className="container signup-card">
       <Link to="/login">← Go to Login</Link>
 
-      {/* <h2>Signup</h2>
+      <h2>Signup</h2>
       <Form onSubmit={handleFormSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicFirstName">
+        <Form.Group className="mb-3">
           <Form.Label>First Name</Form.Label>
-          <input
+          <FormControl
             type="firstname"
             placeholder="Enter first name"
             id="firstName"
@@ -51,9 +57,9 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicLastName">
+        <Form.Group className="mb-3">
           <Form.Label>Last Name</Form.Label>
-          <input
+          <FormControl
             type="lastname"
             placeholder="Enter last name"
             id="lastName"
@@ -61,9 +67,9 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3">
           <Form.Label>Email address</Form.Label>
-          <input
+          <FormControl
             type="email"
             placeholder="Enter email"
             id="email"
@@ -74,9 +80,9 @@ function Signup(props) {
           </Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className="mb-3">
           <Form.Label>Password</Form.Label>
-          <input
+          <FormControl
             type="password"
             placeholder="Password"
             id="pwd"
@@ -84,12 +90,62 @@ function Signup(props) {
           />
         </Form.Group>
 
+        <Form.Group className="mb-3">
+          <Form.Label>How old are you?</Form.Label>
+          <FormControl
+            type="age"
+            placeholder="age"
+            id="age"
+            onChange={handleChange}
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label>What city do you live in?</Form.Label>
+          <FormControl
+            type="city"
+            placeholder="city"
+            id="city"
+            onChange={handleChange}
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label>What is your level of expertise?</Form.Label>
+          <FormControl
+            type="level"
+            placeholder="level"
+            id="level"
+            onChange={handleChange}
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label>Do you drink?</Form.Label>
+          <FormControl
+            type="drink"
+            placeholder="drink"
+            id="drink"
+            onChange={handleChange}
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label>Do you smoke?</Form.Label>
+          <FormControl
+            type="smoke"
+            placeholder="smoke"
+            id="smoke"
+            onChange={handleChange}
+          />
+        </Form.Group>
+
         <Button variant="primary" type="submit">
           ←<Link to="/findplayers">Submit</Link>
         </Button>
-      </Form> */}
+      </Form>
 
-<h2>Signup</h2>
+      {/* <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
           <label htmlFor="firstName">First Name:</label>
@@ -144,7 +200,7 @@ function Signup(props) {
         <div className="flex-row flex-end">
           <button type="submit">Submit</button>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 }

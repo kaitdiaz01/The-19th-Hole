@@ -5,7 +5,7 @@ import './welcome.css';
 
 function Welcome() {
   return (
-    <div class='card-holder' >
+    <div className='card-holder'>
       <Card>
         <Card.Body>
           <Card.Title>Ready to meet some people!</Card.Title>
