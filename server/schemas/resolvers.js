@@ -7,17 +7,17 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     
-    user: async (parent, args, context) => {
+    user: async (parent, args ) => {
       if (context.user) {
 
-        const user = await User.findById(context.user._id).populate({
+        const user = await User.findById().populate({
           path: 'user',
           populate: 'user'
         })
         return user;
       }
 
-      throw new AuthenticationError('Not logged in');
+      // throw new AuthenticationError('Not logged in');
     },
     findAllUsers: async (parent, args) => {
      

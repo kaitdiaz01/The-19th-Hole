@@ -5,7 +5,7 @@ import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
 import { QUERY_USERS } from "../utils/queries";
 import UserCards from "../components/UserCards";
-import { Container } from "react-bootstrap";
+
 
 const FindPlayers = () => {
   // useMutation(getUsers)  use this to getUser information
@@ -32,41 +32,146 @@ const FindPlayers = () => {
 
   return (
     <>
-    <div className="container my-1">
-        
-          <Link to="/">← Test</Link>
+      <div className="container my-1">
 
-          {user ? (
-            <>
-              <h2>
-                List of Users {user.firstName} {user.lastName}
-              </h2>
-              {user.map((user) => (
-                <div key={user._id} className="my-2">
-                  <div className="flex-row">
-                    {user.map(
-                      (
-                        { firstName, lastName, city, level, drink, smoke },
-                        index
-                      ) => (
-                        <div key={index}>
-                          <UserCards
-                            firstName={firstName}
-                            lastName={lastName}
-                            city={city}
-                            level={level}
-                            drink={drink}
-                            smoke={smoke}
-                          />
-                        </div>
-                      )
-                    )}
-                  </div>
+
+        <>
+          <div>
+            <h2>Players in our Database</h2>
+          </div>
+          <div className="flex-row" >
+            <UserCards
+              firstName={"Nick "}
+              lastName={"Quinn"}
+              city={"Washington"}
+              level={"Advanced"}
+              drink={"Okay if the group drinks."}
+              smoke={"Okay if the group smokes"}
+            />
+
+            <UserCards
+              firstName={"Jonny "}
+              lastName={"Bravo"}
+              city={"Orlando"}
+              level={"Advanced"}
+              drink={"Doesn't mind drinking"}
+              smoke={"Okay if the group smokes"}
+            />
+            <UserCards
+              firstName={"Jason "}
+              lastName={"Mamoa"}
+              city={"LA"}
+              level={"Medium"}
+              drink={"Doesn't mind drinking"}
+              smoke={"Minds if someone smokes"}
+            />
+            <UserCards
+              firstName={"Tiger "}
+              lastName={"Woods"}
+              city={"Jupiter"}
+              level={"Professional"}
+              drink={'Minds if someone drinks'}
+              smoke={"Minds if someone smokes"}
+            />
+            <UserCards
+              firstName={"John "}
+              lastName={"Smith"}
+              city={"Orlando"}
+              level={"Beginner"}
+              drink={"Okay if the group drinks."}
+              smoke={"Okay if the group smokes"}
+            />
+            <UserCards
+              firstName={"Jalen "}
+              lastName={"Suggs"}
+              city={"Orlando"}
+              level={"Beginner"}
+              drink={"Okay if the group drinks."}
+              smoke={"Okay if the group smokes"}
+            />
+            <UserCards
+              firstName={"Angela "}
+              lastName={"White"}
+              city={"Orlando"}
+              level={"Beginner"}
+              drink={"Okay if the group drinks."}
+              smoke={"Okay if the group smokes"}
+            />
+            <UserCards
+              firstName={"Mark "}
+              lastName={"Down"}
+              city={"Washington"}
+              level={"Medium"}
+              drink={'Minds if someone drinks'}
+              smoke={"Okay if the group smokes"}
+            />
+            <UserCards
+              firstName={"Patatas "}
+              lastName={"Bravas"}
+              city={"LA"}
+              level={"Beginner"}
+              drink={'Minds if someone drinks'}
+              smoke={"Okay if the group smokes"}
+            />
+            <UserCards
+              firstName={"Producer "}
+              lastName={"Guy"}
+              city={"LA"}
+              level={"Advanced"}
+              drink={"Okay if the group drinks."}
+              smoke={"Okay if the group smokes"}
+            />
+            <UserCards
+              firstName={"Kyle "}
+              lastName={"Driver"}
+              city={"Orlando"}
+              level={"Advanced"}
+              drink={"Okay if the group drinks."}
+              smoke={"Okay if the group smokes"}
+            />
+            <UserCards
+              firstName={"Lexi "}
+              lastName={"Thomopson"}
+              city={"Jupiter"}
+              level={"Professional"}
+              drink={'Minds if someone drinks'}
+              smoke={"Minds if someone smokes"}
+            />
+
+          </div>
+
+        </>
+        {user ? (
+          <>
+            <h2>
+              List of Users {user.firstName} {user.lastName}
+            </h2>
+            {user.map((user) => (
+              <div key={user._id} className="my-2">
+                <div className="flex-row">
+                  {user.map(
+                    (
+                      { firstName, lastName, city, level, drink, smoke },
+                      index
+                    ) => (
+                      <div key={index}>
+                        <UserCards
+                          firstName={"Nick"}
+                          lastName={"Quinn"}
+                          city={"Washington"}
+                          level={"Advanced"}
+                          drink={"true"}
+                          smoke={"false"}
+                        />
+                      </div>
+                    )
+                  )}
                 </div>
-              ))}
-            </>
-          ) : null}
-   
+              </div>
+            ))}
+          </>
+        ) : null}
+
       </div>
     </>
   );
