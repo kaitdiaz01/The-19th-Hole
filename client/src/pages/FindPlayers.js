@@ -37,9 +37,9 @@ const FindPlayers = () => {
 
         <>
           <div>
-            <h2>Players in our Database</h2>
+            <h2 className="all-players-title">Players in our Database</h2>
           </div>
-          <div className="flex-row" >
+          <div className="flex-row all-players">
             <UserCards
               firstName={"Nick "}
               lastName={"Quinn"}

@@ -1,3 +1,10 @@
-.App-logo {
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Dosis:wght@200;500;600&display=swap");
+
+.app-logo {
     width: 30%;
+}
+
+.log-nav {
+    font-family: comfortaa;
+    font-size: 14pt;
 }

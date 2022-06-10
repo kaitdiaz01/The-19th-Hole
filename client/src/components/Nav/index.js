@@ -15,7 +15,7 @@ function NavBar() {
           <Navbar bg="dark" variant="dark">
             <Container>
               <Navbar.Brand>
-              <Link to="/"><img src={logo} className="App-logo" alt="logo" /></Link>
+              <Link to="/"><img src={logo} className="app-logo img-thumbnail" alt="logo" /></Link>
               </Navbar.Brand>
               <Nav className="me-auto">
                 <Link to="/Favorites" style={{padding:'10px'}}> Favorites </Link>
@@ -32,7 +32,7 @@ function NavBar() {
     } else {
       return (
         <div>
-          <Navbar bg="dark" variant="dark">
+          <Navbar className="log-nav" bg="dark" variant="dark">
             <Container>
               <Navbar.Brand>
                 <Link to="/"></Link>
