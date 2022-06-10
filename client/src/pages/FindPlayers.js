@@ -5,7 +5,7 @@ import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../utils/queries";
 import UserCards from "../components/UserCards";
-
+import './findplayers.css'
 
 const FindPlayers = () => {
   // useMutation(getUsers)  use this to getUser information
@@ -136,6 +136,7 @@ const FindPlayers = () => {
               level={"Professional"}
               drink={'Minds if someone drinks'}
               smoke={"Minds if someone smokes"}
+             
             />
 
           </div>
