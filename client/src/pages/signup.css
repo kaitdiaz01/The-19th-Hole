@@ -4,12 +4,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 100px;
+        margin-top: 20px;
+        margin-bottom: 20px;
 
         background-color: white;
         border-radius: 60px;
         font-family: 'Comfortaa', cursive;
-        width: 50% !important;
+        width: 45% !important;
     }
 
 h2 {
@@ -25,17 +26,19 @@ h2 {
 }
 
 .sign-form {
-    width: 63%;
+    width: 66%;
     padding-bottom: 15pt;
 }
 
-.first-name,
-.last-name,
-.email,
-.password {
+.labels {
     font-size: 13pt !important;
 }
 
 .disclaimer {
     font-size: 9pt !important;
+}
+
+.sign-btn {
+    border-style: hidden !important;
+    color: black !important;
 }

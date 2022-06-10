@@ -1,6 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Dosis:wght@200;500;600&display=swap");
+
 .card-holder {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 180px;
+}
+
+.find-card {
+    font-family: dosis;
+    padding: 6pt;
+    width: 33%;
+}
+
+.find-title {
+    font-size: 18pt !important;
+}
+
+.find-btn {
+    border-style: hidden !important;
+    color: black !important;
+    padding-left: 15pt !important;
+    padding-right: 15pt !important;
 }

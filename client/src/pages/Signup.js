@@ -42,12 +42,12 @@ function Signup(props) {
   };
 
   return (
- <div className="container signup-card">
-      <Link to="/login">← Go to Login</Link>
+ <div className="container signup-card shadow">
+      <Link className="login-link" to="/login">← Go to Login</Link>
 
       <h2>Signup</h2>
-      <Form onSubmit={handleFormSubmit}>
-        <Form.Group className="mb-3">
+      <Form className="sign-form" onSubmit={handleFormSubmit}>
+        <Form.Group className="mb-3 labels">
           <Form.Label>First Name</Form.Label>
           <FormControl
             type="firstname"
@@ -57,7 +57,7 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3 labels">
           <Form.Label>Last Name</Form.Label>
           <FormControl
             type="lastname"
@@ -67,7 +67,7 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3 labels">
           <Form.Label>Email address</Form.Label>
           <FormControl
             type="email"
@@ -80,7 +80,7 @@ function Signup(props) {
           </Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3 labels">
           <Form.Label>Password</Form.Label>
           <FormControl
             type="password"
@@ -90,7 +90,7 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3 labels">
           <Form.Label>How old are you?</Form.Label>
           <FormControl
             type="age"
@@ -100,7 +100,7 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3 labels">
           <Form.Label>What city do you live in?</Form.Label>
           <FormControl
             type="city"
@@ -110,7 +110,7 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3 labels">
           <Form.Label>What is your level of expertise?</Form.Label>
           <FormControl
             type="level"
@@ -120,7 +120,7 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3 labels">
           <Form.Label>Do you drink?</Form.Label>
           <FormControl
             type="drink"
@@ -130,7 +130,7 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3 labels">
           <Form.Label>Do you smoke?</Form.Label>
           <FormControl
             type="smoke"
@@ -140,8 +140,8 @@ function Signup(props) {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          ←<Link to="/findplayers">Submit</Link>
+        <Button className="sign-btn shadow" style={{ backgroundColor: "#9db175" }} type="submit">
+        ← Submit<Link to="/findplayers"></Link>
         </Button>
       </Form>
 

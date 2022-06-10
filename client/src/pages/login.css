@@ -4,36 +4,32 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 200px;
+        margin-top: 140px;
 
         background-color: white;
         border-radius: 80px;
         font-family: 'Comfortaa', cursive;
-        width: 50% !important;
+        width: 33% !important;
     }
 
 h2 {
     font-family: 'Dosis', sans-serif;
     font-size: 27pt !important;
     letter-spacing: 1pt !important;
-    padding-top: 5pt;
+    padding-top: 3pt;
 }
 
 .signup-link{
-    padding-top: 15pt;
+    padding-top: 10pt;
     letter-spacing: .25pt ;
 }
 
 .log-form {
-    width: 54%;
-    padding-bottom: 15pt;
+    width: 40%;
+    padding-bottom: 10pt;
 }
 
 .email,
 .password {
     font-size: 13pt !important;
 }
-
-.disclaimer {
-    font-size: 9pt !important;
-} 
