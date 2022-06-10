@@ -18,8 +18,9 @@ function NavBar() {
               <Link to="/"><img src={logo} className="App-logo" alt="logo" /></Link>
               </Navbar.Brand>
               <Nav className="me-auto">
-                <Link to="/Favorites">Favorites </Link>
-                <Link to="/" onClick={() => Auth.logout()}>
+                <Link to="/Favorites" style={{padding:'10px'}}> Favorites </Link>
+                <Link to="/FindPlayers" style={{padding:'10px'}}> Find Players </Link>
+                <Link to="/" style={{padding:'10px'}} onClick={() => Auth.logout()}>
                   {" "}
                   Logout{" "}
                 </Link>
@@ -37,11 +38,11 @@ function NavBar() {
                 <Link to="/"></Link>
               </Navbar.Brand>
               <Nav className="me-auto">
-                <Link to="/signup"> Signup </Link>
+                <Link to="/signup" style={{padding:'10px'}}> Signup </Link>
               <div>
                  
               </div>
-                <Link to="/login"> Login</Link>
+                <Link to="/login" style={{padding:'10px'}}> Login </Link>
               </Nav>
             </Container>
           </Navbar>

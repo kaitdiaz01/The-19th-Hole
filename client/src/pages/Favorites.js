@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
-import { QUERY_USERS } from "../utils/queries";
+import { QUERY_USER } from "../utils/queries";
 import UserCards from "../components/UserCards";
 
 const Favorites = () => {
-const { data, error } = useQuery(QUERY_USERS);
+const { data, error } = useQuery(QUERY_USER);
   let user;
   console.log(error);
 
