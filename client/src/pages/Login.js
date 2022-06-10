@@ -37,39 +37,37 @@ function Login(props) {
     <div className="container login-card shadow p-3 mb-5">
       <Link className= "signup-link" to="/signup">← Go to Signup</Link>
       <h2>Login</h2>
-      <Form className="log-form" onSubmit={handleFormSubmit}>
-        <Form.Group className="mb-3 email" id="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
+          <form className="log-form" onSubmit={handleFormSubmit}>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="email">Email address:</label>
+          <input
+            placeholder="youremail@test.com"
+            name="email"
             type="email"
-            placeholder="Enter email"
             id="email"
             onChange={handleChange}
           />
-          <Form.Text className="text-muted disclaimer">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3 password" id="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">Password:</label>
+          <input
+            placeholder="******"
+            name="password"
             type="password"
-            placeholder="Password"
             id="pwd"
             onChange={handleChange}
           />
-        </Form.Group>
+        </div>
         {error ? (
           <div>
             <p className="error-text">The provided credentials are incorrect</p>
           </div>
         ) : null}
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
-      </div>
+        <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
   );
 }
 
